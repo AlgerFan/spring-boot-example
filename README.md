@@ -32,7 +32,7 @@
 
 [（15）SpringBoot2.0 和邮件](https://www.algerfan.cn/articles/2019/01/15/1547540594012.html)
 
-[（16）Spring Boot2.0 与安全](https://www.algerfan.cn/articles/2019/01/18/1547802074012.html)
+[（16）Spring Boot2.0整合Spring Security](https://www.algerfan.cn/articles/2019/01/18/1547802074012.html)
 
 [（17）Spring Boot整合Shiro](https://www.algerfan.cn/articles/2019/01/18/1547804114012.html)
 
