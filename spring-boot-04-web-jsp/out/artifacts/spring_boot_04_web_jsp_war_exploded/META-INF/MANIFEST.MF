@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Created-By: IntelliJ IDEA
+Built-By: algerfan
+Build-Jdk: 1.8.0_161
+Implementation-Title: spring-boot-04-web-jsp
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: cn.algerfan
+Main-Class: ${start-class}
+

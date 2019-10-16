@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<body>
+<script type="text/javascript">
+    function onc(){
+        var files = document.getElementById("input").files;
+        for(var i=0; i< files.length; i++){
+            // alert(input.files[i].name);
+        }
+    }
+</script>
+<p th:text="${msg}"></p>
+<form th:action="@{/upload}" method="post" enctype="multipart/form-data">
+    选择图片：<input type="file" id="input" name="file" onchange="onc()" multiple="multiple" />
+    <input type="submit" />
+</form>
+<p>请尝试在浏览文件时选取一个以上的文件。</p>
+
+</body>
+</html>

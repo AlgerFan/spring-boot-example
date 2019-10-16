@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1 align="center">欢迎光临商城管理系统</h1>
+<div sec:authorize="!isAuthenticated()">
+	<h2 align="center">游客您好，如果想进入管理系统 <a th:href="@{/userLogin}">请登录</a></h2>
+</div>
+<div sec:authorize="isAuthenticated()">
+	<h2>
+		<span sec:authentication="name"></span>，您好,您的角色有：
+		<span sec:authentication="principal.authorities"></span>
+	</h2>
+	<form th:action="@{/logout}" method="post">
+		<input type="submit" value="注销"/>
+	</form>
+</div>
+<hr>
+
+<div sec:authorize="hasRole('商品管理员')">
+	<h3>商品管理</h3>
+	<ul>
+		<li><a th:href="@{/product/1}">商品管理1</a></li>
+		<li><a th:href="@{/product/2}">商品管理2</a></li>
+	</ul>
+</div>
+
+<div sec:authorize="hasRole('订单管理员')">
+	<h3>订单管理</h3>
+	<ul>
+		<li><a th:href="@{/order/1}">订单管理1</a></li>
+		<li><a th:href="@{/order/2}">订单管理2</a></li>
+	</ul>
+</div>
+
+<div sec:authorize="hasRole('超级管理员')">
+	<h3>超级管理员</h3>
+	<ul>
+		<li><a th:href="@{/admin/1}">商品管理</a></li>
+		<li><a th:href="@{/admin/2}">订单管理</a></li>
+		<li><a th:href="@{/admin/3}">用户管理</a></li>
+	</ul>
+</div>
+
+</body>
+</html>
