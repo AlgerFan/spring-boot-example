@@ -27,7 +27,7 @@ public class UserController {
     @RequestMapping("/testThymeleaf")
     public ModelAndView testThymeleaf(Model model){
         //把数据存入model
-        model.addAttribute("name", "黑马程序员");
+        model.addAttribute("name", "获取的数据");
         //返回test.html
         return new ModelAndView("test");
     }
